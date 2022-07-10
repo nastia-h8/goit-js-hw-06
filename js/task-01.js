@@ -1,8 +1,9 @@
-const categoriesRefs = document.querySelectorAll('.item');
-console.log("Number of categories:", categoriesRefs.length);
+const categories = document.querySelectorAll('.item');
+console.log("Number of categories:", categories.length);
 
-const categoriesArr = [...categoriesRefs]
-categoriesArr.forEach(function (element){
+const categoriesArr = [...categories]
+
+categoriesArr.map(element => {
     console.log(`Category: ${element.querySelector('h2').textContent}`);
     console.log(`Elements: ${element.querySelectorAll('li').length}`);
 })

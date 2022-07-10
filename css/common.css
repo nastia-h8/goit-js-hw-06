@@ -22,3 +22,26 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+/* task-03 */
+.gallery{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -5px;
+  margin-left: -5px;
+}
+
+.gallery img {
+  display: block;
+}
+
+.gallery__item{
+  flex-basis: calc((100% - 15px) / 3);
+    margin-top: 5px;
+    margin-left: 5px;
+}
