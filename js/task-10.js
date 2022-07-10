@@ -15,7 +15,7 @@ function handleSubmit() {
 
 function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
-    const newBoxes = document.createElement('div')
+    const newBoxes = document.createElement('div');
     
     newBoxes.style.width = 30 + i * 10 + 'px';
     newBoxes.style.height = 30 + i * 10 + 'px';
@@ -23,20 +23,15 @@ function createBoxes(amount) {
     
     boxes.append(newBoxes)
   }
-  console.log('працює')
 }
 
 function destroyBoxes() {
-  boxes.remove()
+  boxes.remove();
+  input.value = '';
 }
 
-
-createBtn.addEventListener('click', handleSubmit)
-createBtn.addEventListener('click', createBoxes)
-destroyBtn.addEventListener('click', destroyBoxes)
-
-
-  
+createBtn.addEventListener('click', handleSubmit, createBoxes);
+destroyBtn.addEventListener('click', destroyBoxes);  
 
 
 
