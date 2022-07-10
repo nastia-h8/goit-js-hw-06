@@ -7,19 +7,18 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const input = document.querySelector('#controls input');
 
+
 function handleSubmit() {
-  const inputData = input.value;
-  console.log(inputData)
+  const amount = input.value;
+  createBoxes(amount);
 }
 
-function createBoxes() {
-  for (let i = 1; i <= 10; i += 1){
+function createBoxes(amount) {
+  for (let i = 0; i < amount; i += 1) {
     const newBoxes = document.createElement('div')
     
-    newBoxes.classList.add("box");
-    
-    newBoxes.style.width = '30px';
-    newBoxes.style.height = '30px';
+    newBoxes.style.width = 30 + i * 10 + 'px';
+    newBoxes.style.height = 30 + i * 10 + 'px';
     newBoxes.style.backgroundColor = getRandomHexColor();
     
     boxes.append(newBoxes)
@@ -28,11 +27,7 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  for (let i = 1; i <= 10; i += 1){
-  const boxesToDelete = document.querySelector('#boxes .box');
-  boxesToDelete.remove();
-  }
-  console.log('теж працює') 
+  boxes.remove()
 }
 
 
