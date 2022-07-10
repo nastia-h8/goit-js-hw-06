@@ -14,25 +14,23 @@ function handleSubmit() {
 }
 
 function createBoxes(amount) {
-  for (let i = 0; i < amount; i += 1) {
-    const newBoxes = document.createElement('div');
-    
+  const newBoxesArr = [];
+  
+  for (let i = 1; i <= amount; i += 1) {
+    const newBoxes = document.createElement('div');     
     newBoxes.style.width = 30 + i * 10 + 'px';
     newBoxes.style.height = 30 + i * 10 + 'px';
     newBoxes.style.backgroundColor = getRandomHexColor();
-    
-    boxes.append(newBoxes)
+    newBoxesArr.push(newBoxes);
   }
+    boxes.append(...newBoxesArr);
 }
 
 function destroyBoxes() {
   boxes.remove();
   input.value = '';
+  location.reload();
 }
 
-createBtn.addEventListener('click', handleSubmit, createBoxes);
-destroyBtn.addEventListener('click', destroyBoxes);  
-
-
-
-
+createBtn.addEventListener('click', handleSubmit);
+destroyBtn.addEventListener('click', destroyBoxes);
