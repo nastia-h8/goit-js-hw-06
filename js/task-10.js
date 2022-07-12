@@ -27,9 +27,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxes.remove();
-  input.value = '';
-  location.reload();
+boxes.innerHTML = '';
+input.value = '';
 }
 
 createBtn.addEventListener('click', handleSubmit);
