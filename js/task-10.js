@@ -18,8 +18,8 @@ function createBoxes(amount) {
   
   for (let i = 1; i <= amount; i += 1) {
     const newBoxes = document.createElement('div');     
-    newBoxes.style.width = 30 + i * 10 + 'px';
-    newBoxes.style.height = 30 + i * 10 + 'px';
+    newBoxes.style.width = 20 + i * 10 + 'px';
+    newBoxes.style.height = 20 + i * 10 + 'px';
     newBoxes.style.backgroundColor = getRandomHexColor();
     newBoxesArr.push(newBoxes);
   }
